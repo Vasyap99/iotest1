@@ -1,0 +1,25 @@
+
+package ru.narod.ya_qwe99.iotest;
+
+import java.lang.*;
+import java.io.*;
+
+public class i1{
+  public static void main(String []s){
+    try{
+    byte[]b={60,62,63};
+    System.out.println("kok");
+    FileOutputStream fos=new FileOutputStream("data.dat");
+    fos.write('a');
+    fos.write(b);
+
+    DataOutputStream dos=new DataOutputStream(fos);
+    dos.writeByte(60);
+    dos.writeDouble(128);
+    dos.writeChar('h');
+
+    fos.close(); 
+   
+    }catch(Exception e){}
+  }
+}
